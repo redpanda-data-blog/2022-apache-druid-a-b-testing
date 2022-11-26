@@ -132,10 +132,8 @@ services:
       - --kafka-addr
       - PLAINTEXT://0.0.0.0:29092,OUTSIDE://0.0.0.0:9092
       - --advertise-kafka-addr
-      - PLAINTEXT://redpanda:29092,OUTSIDE://redpanda:9092
+      - PLAINTEXT://redpanda:29092,OUTSIDE://localhost:9092
       - --check=false
-    volumes:
-      - ./events/simulated-events-for-realtime-ab-testing.txt:/opt/redpanda/simulated-events-for-realtime-ab-testing.txt
 
 volumes:
   metadata_data: {}
